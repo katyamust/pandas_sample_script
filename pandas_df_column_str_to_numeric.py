@@ -16,7 +16,11 @@ def pandas_df_column_str_to_numeric( df, str_column_name ):
         d[key] = i
         i += 1
 
-    df[str_column_name].replace(d, inplace=True)
+    df[str_column_name] = df[str_column_name].map(d)
+
+    # this also works but very slow:
+    # df[str_column_name].replace(d, inplace=True)
+
     return df
 
 
