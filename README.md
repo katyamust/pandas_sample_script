@@ -9,3 +9,5 @@ Data for analysis come in often in csv format but contain different object such 
 This code snippets load various type of csv files into pandas DataFrame and can print out statistical analysis for various columns of DataFrame
 
 
+
+Generally pansdas.Series is way slower than numpy series in a range of operaiton. so extract pandas_serie.values ( which is type numpy series) to fast processing of pandas columns
